@@ -1,15 +1,42 @@
 Task1
 
 START
-READ list_of_numbers
-sum ← 0
-count ← 0
 
-FOR each number IN list_of_numbers DO
-    sum ← sum + number
-    count ← count + 1
-END FOR
+  // Step 1: Read the list of numbers
+  READ numbers_list
 
-average ← sum / count
-PRINT average
+  // Step 2: Initialize sum and count
+  sum ← 0
+  count ← 0
+
+  // Step 3: Go through each number in the list
+  FOR each number IN numbers_list DO
+      sum ← sum + number       // Add the number to the total sum
+      count ← count + 1        // Increase the count of numbers
+  END FOR
+
+  // Step 4: Calculate the average
+  average ← sum / count
+
+  // Step 5: Return or display the average
+  RETURN average
+
+END
+
+Task2
+
+START
+
+  // Step 1: Read the number
+  READ number
+
+  // Step 2: Check if the number is divisible by 2
+  IF number MOD 2 = 0 THEN
+      // Step 3: If divisible by 2, it is even
+      RETURN "Even"
+  ELSE
+      // Step 4: Otherwise, it is odd
+      RETURN "Odd"
+  END IF
+
 END
