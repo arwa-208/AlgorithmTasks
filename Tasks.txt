@@ -40,3 +40,25 @@ START
   END IF
 
 END
+
+Task3
+START
+
+  // Step 1: Read the list of numbers
+  READ numbers_list
+
+  // Step 2: Assume the first number is the smallest
+  smallest ← numbers_list[0]
+
+  // Step 3: Go through each number in the list
+  FOR each number IN numbers_list DO
+      IF number < smallest THEN
+          // Step 4: If the current number is smaller, update smallest
+          smallest ← number
+      END IF
+  END FOR
+
+  // Step 5: Return the smallest number
+  RETURN smallest
+
+END
