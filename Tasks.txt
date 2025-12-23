@@ -88,3 +88,26 @@ START
   RETURN positive_count, negative_count
 
 END
+
+Task5
+
+START
+
+  // Step 1: Read the list of numbers
+  READ numbers_list
+
+  // Step 2: Create an empty list to store unique numbers
+  unique_list ← empty list
+
+  // Step 3: Go through each number in the original list
+  FOR each number IN numbers_list DO
+      IF number is NOT in unique_list THEN
+          // Step 4: If number is not already in unique_list, add it
+          ADD number TO unique_list
+      END IF
+  END FOR
+
+  // Step 5: Return the list with unique values
+  RETURN unique_list
+
+END
