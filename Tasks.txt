@@ -1,0 +1,15 @@
+Task1
+
+START
+READ list_of_numbers
+sum ← 0
+count ← 0
+
+FOR each number IN list_of_numbers DO
+    sum ← sum + number
+    count ← count + 1
+END FOR
+
+average ← sum / count
+PRINT average
+END
