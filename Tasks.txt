@@ -62,3 +62,29 @@ START
   RETURN smallest
 
 END
+
+Task4
+
+START
+
+  // Step 1: Read the list of numbers
+  READ numbers_list
+
+  // Step 2: Initialize counters
+  positive_count ← 0
+  negative_count ← 0
+
+  // Step 3: Go through each number in the list
+  FOR each number IN numbers_list DO
+      IF number > 0 THEN
+          positive_count ← positive_count + 1
+      ELSE IF number < 0 THEN
+          negative_count ← negative_count + 1
+      END IF
+      // Zero is ignored (neither positive nor negative)
+  END FOR
+
+  // Step 4: Return the counts
+  RETURN positive_count, negative_count
+
+END
