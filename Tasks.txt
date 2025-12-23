@@ -111,3 +111,35 @@ START
   RETURN unique_list
 
 END
+
+Task6
+START
+
+  // Step 1: Read the number N
+  READ N
+
+  // Step 2: Create an empty list to store prime numbers
+  prime_list ← empty list
+
+  // Step 3: Check each number from 2 to N
+  FOR number FROM 2 TO N DO
+      is_prime ← true  // Assume the number is prime
+
+      // Step 4: Check if number is divisible by any number from 2 to number-1
+      FOR i FROM 2 TO number-1 DO
+          IF number MOD i = 0 THEN
+              is_prime ← false   // Number is not prime
+              BREAK              // No need to check further
+          END IF
+      END FOR
+
+      // Step 5: If number is prime, add it to prime_list
+      IF is_prime = true THEN
+          ADD number TO prime_list
+      END IF
+  END FOR
+
+  // Step 6: Return the list of prime numbers
+  RETURN prime_list
+
+END
