@@ -241,4 +241,35 @@ END
 
 A palindrome is a word, phrase, number, or sequence that reads the same forward and backward.
 
+Task10
+
+START
+
+  // Step 1: Read the number N
+  READ N
+
+  // Step 2: Create an empty list to store Fibonacci numbers
+  fibonacci_list ← empty list
+
+  // Step 3: Handle the first Fibonacci number
+  IF N ≥ 1 THEN
+      ADD 0 TO fibonacci_list
+  END IF
+
+  // Step 4: Handle the second Fibonacci number
+  IF N ≥ 2 THEN
+      ADD 1 TO fibonacci_list
+  END IF
+
+  // Step 5: Generate remaining Fibonacci numbers
+  FOR i FROM 3 TO N DO
+      next_number ← fibonacci_list[i-2] + fibonacci_list[i-3]
+      ADD next_number TO fibonacci_list
+  END FOR
+
+  // Step 6: Return the Fibonacci sequence
+  RETURN fibonacci_list
+
+END
+
 
