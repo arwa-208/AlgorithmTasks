@@ -143,3 +143,48 @@ START
   RETURN prime_list
 
 END
+
+task7
+START
+
+  // Step 1: Read the two sorted lists
+  READ list1
+  READ list2
+
+  // Step 2: Create an empty list for the result
+  merged_list ← empty list
+
+  // Step 3: Set pointers for both lists
+  i ← 0
+  j ← 0
+
+  // Step 4: Compare elements from both lists
+  WHILE i < length(list1) AND j < length(list2) DO
+      IF list1[i] ≤ list2[j] THEN
+          ADD list1[i] TO merged_list
+          i ← i + 1
+      ELSE
+          ADD list2[j] TO merged_list
+          j ← j + 1
+      END IF
+  END WHILE
+
+  // Step 5: Add remaining elements from list1 (if any)
+  WHILE i < length(list1) DO
+      ADD list1[i] TO merged_list
+      i ← i + 1
+  END WHILE
+
+  // Step 6: Add remaining elements from list2 (if any)
+  WHILE j < length(list2) DO
+      ADD list2[j] TO merged_list
+      j ← j + 1
+  END WHILE
+
+  // Step 7: Return the merged sorted list
+  RETURN merged_list
+
+END
+
+
+
