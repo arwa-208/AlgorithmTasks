@@ -215,4 +215,30 @@ START
 
 END
 
+Task9
+START
+
+  // Step 1: Read the string
+  READ text
+
+  // Step 2: Convert the string to lowercase
+  text ← convert text to lowercase
+
+  // Step 3: Remove all spaces from the string
+  text ← remove spaces from text
+
+  // Step 4: Reverse the string
+  reversed_text ← reverse text
+
+  // Step 5: Compare the original and reversed strings
+  IF text = reversed_text THEN
+      RETURN "Palindrome"
+  ELSE
+      RETURN "Not a Palindrome"
+  END IF
+
+END
+
+A palindrome is a word, phrase, number, or sequence that reads the same forward and backward.
+
 
