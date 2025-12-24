@@ -186,5 +186,33 @@ START
 
 END
 
+Task8
+
+START
+
+  // Step 1: Read the list of numbers
+  READ numbers_list
+
+  // Step 2: Initialize the largest and second largest values
+  largest ← -∞
+  second_largest ← -∞
+
+  // Step 3: Go through each number in the list
+  FOR each number IN numbers_list DO
+
+      IF number > largest THEN
+          second_largest ← largest
+          largest ← number
+
+      ELSE IF number < largest AND number > second_largest THEN
+          second_largest ← number
+      END IF
+
+  END FOR
+
+  // Step 4: Return the second largest number
+  RETURN second_largest
+
+END
 
 
